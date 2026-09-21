@@ -1,0 +1,16 @@
+{"time":"2024-11-15T23:22:51.620668701-05:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-11-15T23:22:51.62070246-05:00","level":"INFO","msg":"created symlink","path":"/research/hal-afsharim/EmoLLMs/src/wandb/run-20241115_232251-beo802u3/logs/debug-core.log"}
+{"time":"2024-11-15T23:22:51.841377779-05:00","level":"INFO","msg":"created new stream","id":"beo802u3"}
+{"time":"2024-11-15T23:22:51.841462929-05:00","level":"INFO","msg":"stream: started","id":"beo802u3"}
+{"time":"2024-11-15T23:22:51.841526738-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"beo802u3"}
+{"time":"2024-11-15T23:22:51.841526798-05:00","level":"INFO","msg":"sender: started","stream_id":"beo802u3"}
+{"time":"2024-11-15T23:22:51.841644677-05:00","level":"INFO","msg":"handler: started","stream_id":"beo802u3"}
+{"time":"2024-11-15T23:22:51.993351652-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-15T23:23:50.357585221-05:00","level":"INFO","msg":"stream: closing","id":"beo802u3"}
+{"time":"2024-11-15T23:23:50.357724639-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-15T23:23:50.358635311-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-15T23:23:51.280251024-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-15T23:23:51.716189069-05:00","level":"INFO","msg":"handler: closed","stream_id":"beo802u3"}
+{"time":"2024-11-15T23:23:51.716255398-05:00","level":"INFO","msg":"sender: closed","stream_id":"beo802u3"}
+{"time":"2024-11-15T23:23:51.716235868-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"beo802u3"}
+{"time":"2024-11-15T23:23:51.717580845-05:00","level":"INFO","msg":"stream: closed","id":"beo802u3"}

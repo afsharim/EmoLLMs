@@ -1,0 +1,16 @@
+{"time":"2024-11-15T23:53:13.878472962-05:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-11-15T23:53:13.878499272-05:00","level":"INFO","msg":"created symlink","path":"/research/hal-afsharim/EmoLLMs/src/wandb/run-20241115_235313-zks7880y/logs/debug-core.log"}
+{"time":"2024-11-15T23:53:13.994860914-05:00","level":"INFO","msg":"created new stream","id":"zks7880y"}
+{"time":"2024-11-15T23:53:13.994977893-05:00","level":"INFO","msg":"stream: started","id":"zks7880y"}
+{"time":"2024-11-15T23:53:13.995038903-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"zks7880y"}
+{"time":"2024-11-15T23:53:13.995101542-05:00","level":"INFO","msg":"sender: started","stream_id":"zks7880y"}
+{"time":"2024-11-15T23:53:13.995147792-05:00","level":"INFO","msg":"handler: started","stream_id":"zks7880y"}
+{"time":"2024-11-15T23:53:14.154309362-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-15T23:56:24.878417353-05:00","level":"INFO","msg":"stream: closing","id":"zks7880y"}
+{"time":"2024-11-15T23:56:24.878486452-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-15T23:56:24.88099626-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-15T23:56:25.809521627-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-15T23:56:25.997804761-05:00","level":"INFO","msg":"handler: closed","stream_id":"zks7880y"}
+{"time":"2024-11-15T23:56:25.99788047-05:00","level":"INFO","msg":"sender: closed","stream_id":"zks7880y"}
+{"time":"2024-11-15T23:56:25.99787536-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"zks7880y"}
+{"time":"2024-11-15T23:56:25.99902452-05:00","level":"INFO","msg":"stream: closed","id":"zks7880y"}

@@ -1,0 +1,16 @@
+{"time":"2024-11-15T23:41:41.147236141-05:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-11-15T23:41:41.147253471-05:00","level":"INFO","msg":"created symlink","path":"/research/hal-afsharim/EmoLLMs/src/wandb/run-20241115_234141-l9azsr63/logs/debug-core.log"}
+{"time":"2024-11-15T23:41:41.267254066-05:00","level":"INFO","msg":"created new stream","id":"l9azsr63"}
+{"time":"2024-11-15T23:41:41.267323615-05:00","level":"INFO","msg":"stream: started","id":"l9azsr63"}
+{"time":"2024-11-15T23:41:41.267390354-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"l9azsr63"}
+{"time":"2024-11-15T23:41:41.267426144-05:00","level":"INFO","msg":"sender: started","stream_id":"l9azsr63"}
+{"time":"2024-11-15T23:41:41.267464474-05:00","level":"INFO","msg":"handler: started","stream_id":"l9azsr63"}
+{"time":"2024-11-15T23:41:41.467005496-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-15T23:44:16.550597587-05:00","level":"INFO","msg":"stream: closing","id":"l9azsr63"}
+{"time":"2024-11-15T23:44:16.550716526-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-15T23:44:16.551839005-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-15T23:44:16.886984539-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-15T23:44:17.075688879-05:00","level":"INFO","msg":"handler: closed","stream_id":"l9azsr63"}
+{"time":"2024-11-15T23:44:17.075777358-05:00","level":"INFO","msg":"sender: closed","stream_id":"l9azsr63"}
+{"time":"2024-11-15T23:44:17.075767438-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"l9azsr63"}
+{"time":"2024-11-15T23:44:17.076887378-05:00","level":"INFO","msg":"stream: closed","id":"l9azsr63"}

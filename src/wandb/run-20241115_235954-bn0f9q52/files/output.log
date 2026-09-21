@@ -1,0 +1,49 @@
+Map: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1937/1937 [00:00<00:00, 2726.45 examples/s]
+Map: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 415/415 [00:00<00:00, 2722.02 examples/s]
+Map: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 416/416 [00:00<00:00, 2770.76 examples/s]
+/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/optimization.py:411: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+  0%|                                                                                                                                                                              | 0/1452 [00:00<?, ?it/s]/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 33%|██████████████████████████████████████████████████████▋                                                                                                             | 484/1452 [03:38<07:25,  2.17it/s]/research/hal-afsharim/EmoLLMs/src/t5.py:72: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /home/conda/feedstock_root/build_artifacts/libtorch_1728232835435/work/torch/csrc/utils/tensor_new.cpp:278.)
+{'loss': 19.4141, 'learning_rate': 9.602272727272726e-07, 'epoch': 0.21}
+{'loss': 13.759, 'learning_rate': 8.892045454545454e-07, 'epoch': 0.41}
+{'loss': 10.9177, 'learning_rate': 8.181818181818182e-07, 'epoch': 0.62}
+{'loss': 8.2754, 'learning_rate': 7.471590909090909e-07, 'epoch': 0.83}
+  predictions = torch.argmax(torch.tensor(predictions), dim=-1)███████████████████████████████████████████████████████████████████████████████████████████████████████████| 208/208 [00:29<00:00,  2.99it/s]
+Traceback (most recent call last):
+  File "/research/hal-afsharim/EmoLLMs/src/t5.py", line 166, in <module>
+    main()
+  File "/research/hal-afsharim/EmoLLMs/src/t5.py", line 149, in main
+    trainer.train()
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 1645, in train
+    return inner_training_loop(
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 2035, in _inner_training_loop
+    self._maybe_log_save_evaluate(tr_loss, model, trial, epoch, ignore_keys_for_eval)
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 2321, in _maybe_log_save_evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 3053, in evaluate
+    output = eval_loop(
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 3353, in evaluation_loop
+    metrics = self.compute_metrics(EvalPrediction(predictions=all_preds, label_ids=all_labels))
+  File "/research/hal-afsharim/EmoLLMs/src/t5.py", line 72, in compute_metrics
+    predictions = torch.argmax(torch.tensor(predictions), dim=-1)
+ValueError: expected sequence of length 32128 at dim 3 (got 768)
+Traceback (most recent call last):
+  File "/research/hal-afsharim/EmoLLMs/src/t5.py", line 166, in <module>
+    main()
+  File "/research/hal-afsharim/EmoLLMs/src/t5.py", line 149, in main
+    trainer.train()
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 1645, in train
+    return inner_training_loop(
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 2035, in _inner_training_loop
+    self._maybe_log_save_evaluate(tr_loss, model, trial, epoch, ignore_keys_for_eval)
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 2321, in _maybe_log_save_evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 3053, in evaluate
+    output = eval_loop(
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 3353, in evaluation_loop
+    metrics = self.compute_metrics(EvalPrediction(predictions=all_preds, label_ids=all_labels))
+  File "/research/hal-afsharim/EmoLLMs/src/t5.py", line 72, in compute_metrics
+    predictions = torch.argmax(torch.tensor(predictions), dim=-1)
+ValueError: expected sequence of length 32128 at dim 3 (got 768)

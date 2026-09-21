@@ -1,0 +1,16 @@
+{"time":"2024-11-15T23:52:38.841932227-05:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-11-15T23:52:38.841955146-05:00","level":"INFO","msg":"created symlink","path":"/research/hal-afsharim/EmoLLMs/src/wandb/run-20241115_235238-1t445n2c/logs/debug-core.log"}
+{"time":"2024-11-15T23:52:39.059709564-05:00","level":"INFO","msg":"created new stream","id":"1t445n2c"}
+{"time":"2024-11-15T23:52:39.059794203-05:00","level":"INFO","msg":"stream: started","id":"1t445n2c"}
+{"time":"2024-11-15T23:52:39.059874493-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"1t445n2c"}
+{"time":"2024-11-15T23:52:39.059918242-05:00","level":"INFO","msg":"sender: started","stream_id":"1t445n2c"}
+{"time":"2024-11-15T23:52:39.059870153-05:00","level":"INFO","msg":"handler: started","stream_id":"1t445n2c"}
+{"time":"2024-11-15T23:52:39.221437733-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-15T23:52:42.360839932-05:00","level":"INFO","msg":"stream: closing","id":"1t445n2c"}
+{"time":"2024-11-15T23:52:42.36101137-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-15T23:52:42.364812069-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-15T23:52:42.640832067-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-15T23:52:42.739050038-05:00","level":"INFO","msg":"handler: closed","stream_id":"1t445n2c"}
+{"time":"2024-11-15T23:52:42.739108808-05:00","level":"INFO","msg":"sender: closed","stream_id":"1t445n2c"}
+{"time":"2024-11-15T23:52:42.739094578-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"1t445n2c"}
+{"time":"2024-11-15T23:52:42.74010578-05:00","level":"INFO","msg":"stream: closed","id":"1t445n2c"}

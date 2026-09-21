@@ -1,0 +1,16 @@
+{"time":"2024-11-15T23:21:41.880049697-05:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-11-15T23:21:41.880078407-05:00","level":"INFO","msg":"created symlink","path":"/research/hal-afsharim/EmoLLMs/src/wandb/run-20241115_232141-dr265xlm/logs/debug-core.log"}
+{"time":"2024-11-15T23:21:42.108718668-05:00","level":"INFO","msg":"created new stream","id":"dr265xlm"}
+{"time":"2024-11-15T23:21:42.108773477-05:00","level":"INFO","msg":"stream: started","id":"dr265xlm"}
+{"time":"2024-11-15T23:21:42.108930076-05:00","level":"INFO","msg":"handler: started","stream_id":"dr265xlm"}
+{"time":"2024-11-15T23:21:42.10948739-05:00","level":"INFO","msg":"sender: started","stream_id":"dr265xlm"}
+{"time":"2024-11-15T23:21:42.10948803-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"dr265xlm"}
+{"time":"2024-11-15T23:21:42.36534118-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-15T23:21:43.208697733-05:00","level":"INFO","msg":"stream: closing","id":"dr265xlm"}
+{"time":"2024-11-15T23:21:43.208752603-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-15T23:21:43.209666934-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-15T23:21:44.355735663-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-15T23:21:44.454729856-05:00","level":"INFO","msg":"handler: closed","stream_id":"dr265xlm"}
+{"time":"2024-11-15T23:21:44.454760626-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"dr265xlm"}
+{"time":"2024-11-15T23:21:44.454860405-05:00","level":"INFO","msg":"sender: closed","stream_id":"dr265xlm"}
+{"time":"2024-11-15T23:21:44.455587788-05:00","level":"INFO","msg":"stream: closed","id":"dr265xlm"}

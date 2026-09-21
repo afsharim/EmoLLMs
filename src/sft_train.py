@@ -31,9 +31,13 @@ from sample_generator import (
     generate_and_tokenize_prompt,
 )
 from models.llama.modeling_llama import LlamaForCausalLM
+from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+
+
 
 if version.parse(transformers.__version__) <= version.parse("4.30.2"):
-    from src.trainer import MyTrainer as Trainer
+    # from src.trainer import MyTrainer as Trainer
+    from transformers import Trainer
 else:
     from transformers import Trainer
 
@@ -234,17 +238,23 @@ def main():
             torch_dtype=torch_dtype,
         )
     else:
-        if model_args.llama:
-            model = LlamaForCausalLM.from_pretrained(
-                model_args.model_name_or_path,
-                torch_dtype=torch_dtype,
-            )
-            model.config.use_flash_attention = model_args.use_flash_attention
-        else:
-            model = AutoModelForCausalLM.from_pretrained(
-                model_args.model_name_or_path,
-                torch_dtype=torch_dtype,
-            )
+        model = AutoModelForSeq2SeqLM.from_pretrained(
+            model_args.model_name_or_path,
+            torch_dtype=torch_dtype,
+        )
+        tokenizer = AutoTokenizer.from_pretrained(model_args.model_name_or_path)
+
+        # if model_args.llama:
+        #     model = LlamaForCausalLM.from_pretrained(
+        #         model_args.model_name_or_path,
+        #         torch_dtype=torch_dtype,
+        #     )
+        #     model.config.use_flash_attention = model_args.use_flash_attention
+        # else:
+        #     model = AutoModelForCausalLM.from_pretrained(
+        #         model_args.model_name_or_path,
+        #         torch_dtype=torch_dtype,
+        #     )
 
     if model_args.llama:
         tokenizer = LlamaTokenizer.from_pretrained(model_args.model_name_or_path)
@@ -258,24 +268,24 @@ def main():
     else:
         tokenizer = AutoTokenizer.from_pretrained(model_args.model_name_or_path)
 
-    tokenizer.pad_token_id = 0
-    tokenizer.padding_side = "left"  # Allow batched inference
+    # tokenizer.pad_token_id = 0
+    # tokenizer.padding_side = "left"  # Allow batched inference
 
-    print_rank_0(
-        "tokenizer.eos_token_id = {}".format(tokenizer.eos_token_id),
-        log_file,
-        global_rank,
-    )
-    print_rank_0(
-        "tokenizer.pad_token_id = {}".format(tokenizer.pad_token_id),
-        log_file,
-        global_rank,
-    )
-    print_rank_0(
-        "tokenizer.bos_token_id = {}".format(tokenizer.bos_token_id),
-        log_file,
-        global_rank,
-    )
+    # print_rank_0(
+    #     "tokenizer.eos_token_id = {}".format(tokenizer.eos_token_id),
+    #     log_file,
+    #     global_rank,
+    # )
+    # print_rank_0(
+    #     "tokenizer.pad_token_id = {}".format(tokenizer.pad_token_id),
+    #     log_file,
+    #     global_rank,
+    # )
+    # print_rank_0(
+    #     "tokenizer.bos_token_id = {}".format(tokenizer.bos_token_id),
+    #     log_file,
+    #     global_rank,
+    # )
 
     # peft model
     if training_args.use_lora:

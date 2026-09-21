@@ -1,0 +1,16 @@
+{"time":"2024-11-15T23:36:41.043352596-05:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-11-15T23:36:41.043387656-05:00","level":"INFO","msg":"created symlink","path":"/research/hal-afsharim/EmoLLMs/src/wandb/run-20241115_233641-ausporqi/logs/debug-core.log"}
+{"time":"2024-11-15T23:36:41.264614422-05:00","level":"INFO","msg":"created new stream","id":"ausporqi"}
+{"time":"2024-11-15T23:36:41.264660861-05:00","level":"INFO","msg":"stream: started","id":"ausporqi"}
+{"time":"2024-11-15T23:36:41.26473856-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"ausporqi"}
+{"time":"2024-11-15T23:36:41.26475792-05:00","level":"INFO","msg":"handler: started","stream_id":"ausporqi"}
+{"time":"2024-11-15T23:36:41.265394604-05:00","level":"INFO","msg":"sender: started","stream_id":"ausporqi"}
+{"time":"2024-11-15T23:36:41.92299489-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-15T23:38:22.489323598-05:00","level":"INFO","msg":"stream: closing","id":"ausporqi"}
+{"time":"2024-11-15T23:38:22.489458527-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-15T23:38:22.490437678-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-15T23:38:23.436590296-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-15T23:38:23.625023061-05:00","level":"INFO","msg":"handler: closed","stream_id":"ausporqi"}
+{"time":"2024-11-15T23:38:23.62509425-05:00","level":"INFO","msg":"sender: closed","stream_id":"ausporqi"}
+{"time":"2024-11-15T23:38:23.62507219-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ausporqi"}
+{"time":"2024-11-15T23:38:23.62623451-05:00","level":"INFO","msg":"stream: closed","id":"ausporqi"}

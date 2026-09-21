@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/research/hal-afsharim/EmoLLMs/src/t5.py", line 166, in <module>
+    main()
+  File "/research/hal-afsharim/EmoLLMs/src/t5.py", line 117, in main
+    training_arguments = TrainingArguments(
+  File "<string>", line 111, in __init__
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/training_args.py", line 1199, in __post_init__
+    self.evaluation_strategy = IntervalStrategy(self.evaluation_strategy)
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/enum.py", line 385, in __call__
+    return cls.__new__(cls, value)
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/enum.py", line 718, in __new__
+    raise exc
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/enum.py", line 700, in __new__
+    result = cls._missing_(value)
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/utils/generic.py", line 348, in _missing_
+    raise ValueError(
+ValueError: epochs is not a valid IntervalStrategy, please select one of ['no', 'steps', 'epoch']
+Traceback (most recent call last):
+  File "/research/hal-afsharim/EmoLLMs/src/t5.py", line 166, in <module>
+    main()
+  File "/research/hal-afsharim/EmoLLMs/src/t5.py", line 117, in main
+    training_arguments = TrainingArguments(
+  File "<string>", line 111, in __init__
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/training_args.py", line 1199, in __post_init__
+    self.evaluation_strategy = IntervalStrategy(self.evaluation_strategy)
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/enum.py", line 385, in __call__
+    return cls.__new__(cls, value)
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/enum.py", line 718, in __new__
+    raise exc
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/enum.py", line 700, in __new__
+    result = cls._missing_(value)
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/utils/generic.py", line 348, in _missing_
+    raise ValueError(
+ValueError: epochs is not a valid IntervalStrategy, please select one of ['no', 'steps', 'epoch']

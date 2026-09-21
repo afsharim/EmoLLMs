@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/research/hal-afsharim/EmoLLMs/src/t5.py", line 174, in <module>
+    main()
+  File "/research/hal-afsharim/EmoLLMs/src/t5.py", line 93, in main
+    training_args = TrainingConfig(
+TypeError: TrainingConfig.__init__() got an unexpected keyword argument 'fp16'
+Traceback (most recent call last):
+  File "/research/hal-afsharim/EmoLLMs/src/t5.py", line 174, in <module>
+    main()
+  File "/research/hal-afsharim/EmoLLMs/src/t5.py", line 93, in main
+    training_args = TrainingConfig(
+TypeError: TrainingConfig.__init__() got an unexpected keyword argument 'fp16'

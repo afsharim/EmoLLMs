@@ -1,0 +1,16 @@
+{"time":"2024-11-15T23:48:01.614373778-05:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2024-11-15T23:48:01.614402008-05:00","level":"INFO","msg":"created symlink","path":"/research/hal-afsharim/EmoLLMs/src/wandb/run-20241115_234801-p5vjlb2v/logs/debug-core.log"}
+{"time":"2024-11-15T23:48:01.834234924-05:00","level":"INFO","msg":"created new stream","id":"p5vjlb2v"}
+{"time":"2024-11-15T23:48:01.834429002-05:00","level":"INFO","msg":"stream: started","id":"p5vjlb2v"}
+{"time":"2024-11-15T23:48:01.835314594-05:00","level":"INFO","msg":"sender: started","stream_id":"p5vjlb2v"}
+{"time":"2024-11-15T23:48:01.835318304-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"p5vjlb2v"}
+{"time":"2024-11-15T23:48:01.835287754-05:00","level":"INFO","msg":"handler: started","stream_id":"p5vjlb2v"}
+{"time":"2024-11-15T23:48:02.001181311-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-15T23:48:02.456706442-05:00","level":"INFO","msg":"stream: closing","id":"p5vjlb2v"}
+{"time":"2024-11-15T23:48:02.456794421-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-15T23:48:02.457546144-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-15T23:48:03.469245481-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-15T23:48:03.542165819-05:00","level":"INFO","msg":"handler: closed","stream_id":"p5vjlb2v"}
+{"time":"2024-11-15T23:48:03.542224679-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"p5vjlb2v"}
+{"time":"2024-11-15T23:48:03.542260678-05:00","level":"INFO","msg":"sender: closed","stream_id":"p5vjlb2v"}
+{"time":"2024-11-15T23:48:03.54319093-05:00","level":"INFO","msg":"stream: closed","id":"p5vjlb2v"}

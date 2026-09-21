@@ -1,0 +1,54 @@
+/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/optimization.py:411: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+  0%|                                                                                                                                                                               | 0/726 [00:00<?, ?it/s]/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+ 33%|███████████████████████████████████████████████████████                                                                                                              | 242/726 [02:06<04:06,  1.96it/s]Traceback (most recent call last):
+{'loss': 19.0317, 'learning_rate': 8.892045454545454e-07, 'epoch': 0.41}
+{'loss': 13.2624, 'learning_rate': 7.471590909090909e-07, 'epoch': 0.82}
+  File "/research/hal-afsharim/EmoLLMs/src/t5.py", line 166, in <module>█████████████████████████████████████████████████████████████▌                                    | 162/208 [00:59<00:30,  1.52it/s]
+    main()
+  File "/research/hal-afsharim/EmoLLMs/src/t5.py", line 149, in main
+    trainer.train()
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 1645, in train
+    return inner_training_loop(
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 2035, in _inner_training_loop
+    self._maybe_log_save_evaluate(tr_loss, model, trial, epoch, ignore_keys_for_eval)
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 2321, in _maybe_log_save_evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 3053, in evaluate
+    output = eval_loop(
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 3270, in evaluation_loop
+    preds_host = logits if preds_host is None else nested_concat(preds_host, logits, padding_index=-100)
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer_pt_utils.py", line 114, in nested_concat
+    return type(tensors)(nested_concat(t, n, padding_index=padding_index) for t, n in zip(tensors, new_tensors))
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer_pt_utils.py", line 114, in <genexpr>
+    return type(tensors)(nested_concat(t, n, padding_index=padding_index) for t, n in zip(tensors, new_tensors))
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer_pt_utils.py", line 116, in nested_concat
+    return torch_pad_and_concatenate(tensors, new_tensors, padding_index=padding_index)
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer_pt_utils.py", line 75, in torch_pad_and_concatenate
+    return torch.cat((tensor1, tensor2), dim=0)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 19.98 GiB. GPU 0 has a total capacity of 47.54 GiB of which 19.93 GiB is free. Including non-PyTorch memory, this process has 27.60 GiB memory in use. Of the allocated memory 23.81 GiB is allocated by PyTorch, and 3.11 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/research/hal-afsharim/EmoLLMs/src/t5.py", line 166, in <module>
+    main()
+  File "/research/hal-afsharim/EmoLLMs/src/t5.py", line 149, in main
+    trainer.train()
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 1645, in train
+    return inner_training_loop(
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 2035, in _inner_training_loop
+    self._maybe_log_save_evaluate(tr_loss, model, trial, epoch, ignore_keys_for_eval)
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 2321, in _maybe_log_save_evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 3053, in evaluate
+    output = eval_loop(
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer.py", line 3270, in evaluation_loop
+    preds_host = logits if preds_host is None else nested_concat(preds_host, logits, padding_index=-100)
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer_pt_utils.py", line 114, in nested_concat
+    return type(tensors)(nested_concat(t, n, padding_index=padding_index) for t, n in zip(tensors, new_tensors))
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer_pt_utils.py", line 114, in <genexpr>
+    return type(tensors)(nested_concat(t, n, padding_index=padding_index) for t, n in zip(tensors, new_tensors))
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer_pt_utils.py", line 116, in nested_concat
+    return torch_pad_and_concatenate(tensors, new_tensors, padding_index=padding_index)
+  File "/research/hal-afsharim/miniconda3/envs/nlp/lib/python3.10/site-packages/transformers/trainer_pt_utils.py", line 75, in torch_pad_and_concatenate
+    return torch.cat((tensor1, tensor2), dim=0)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 19.98 GiB. GPU 0 has a total capacity of 47.54 GiB of which 19.93 GiB is free. Including non-PyTorch memory, this process has 27.60 GiB memory in use. Of the allocated memory 23.81 GiB is allocated by PyTorch, and 3.11 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

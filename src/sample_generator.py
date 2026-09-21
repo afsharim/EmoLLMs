@@ -35,53 +35,84 @@ def sft_sample_to_ids(conversations: Dict[str, Any], tokenizer: PreTrainedTokeni
     return input_ids, labels
 
 
-def generate_and_tokenize_prompt(
-    model_max_length: int,
-    tokenizer: PreTrainedTokenizer,
-    data_point: Dict[str, Any],
-    fix_length=False,
-    padding_side="left",
-):
-    conversations = data_point["conversations"]
-    input_ids, labels = sft_sample_to_ids(conversations, tokenizer)
+# def generate_and_tokenize_prompt(
+#     model_max_length: int,
+#     tokenizer: PreTrainedTokenizer,
+#     data_point: Dict[str, Any],
+#     fix_length=False,
+#     padding_side="left",
+# ):
+#     conversations = data_point["conversations"]
+#     input_ids, labels = sft_sample_to_ids(conversations, tokenizer)
 
-    input_ids = input_ids[:model_max_length]
-    labels = labels[:model_max_length]
+#     input_ids = input_ids[:model_max_length]
+#     labels = labels[:model_max_length]
 
-    if all(x == IGNORE_INDEX for x in labels):
-        labels[18:24] = input_ids[
-            18:24
-        ]  # labels can not have all values being -100. 18 and 24 are just random numbers
-    attention_mask = [1] * len(input_ids)
+#     if all(x == IGNORE_INDEX for x in labels):
+#         labels[18:24] = input_ids[
+#             18:24
+#         ]  # labels can not have all values being -100. 18 and 24 are just random numbers
+#     attention_mask = [1] * len(input_ids)
 
-    if fix_length and model_max_length > len(input_ids):
-        if padding_side == "left":
-            input_ids = [tokenizer.pad_token_id] * (
-                model_max_length - len(input_ids)
-            ) + input_ids
-            labels = [tokenizer.pad_token_id] * (
-                model_max_length - len(labels)
-            ) + labels
-            attention_mask = [0] * (
-                model_max_length - len(attention_mask)
-            ) + attention_mask
-        else:
-            input_ids = input_ids + [tokenizer.pad_token_id] * (
-                model_max_length - len(input_ids)
-            )
-            labels = labels + [tokenizer.pad_token_id] * (
-                model_max_length - len(labels)
-            )
-            attention_mask = attention_mask + [0] * (
-                model_max_length - len(attention_mask)
-            )
+#     if fix_length and model_max_length > len(input_ids):
+#         if padding_side == "left":
+#             input_ids = [tokenizer.pad_token_id] * (
+#                 model_max_length - len(input_ids)
+#             ) + input_ids
+#             labels = [tokenizer.pad_token_id] * (
+#                 model_max_length - len(labels)
+#             ) + labels
+#             attention_mask = [0] * (
+#                 model_max_length - len(attention_mask)
+#             ) + attention_mask
+#         else:
+#             input_ids = input_ids + [tokenizer.pad_token_id] * (
+#                 model_max_length - len(input_ids)
+#             )
+#             labels = labels + [tokenizer.pad_token_id] * (
+#                 model_max_length - len(labels)
+#             )
+#             attention_mask = attention_mask + [0] * (
+#                 model_max_length - len(attention_mask)
+#             )
 
-    tokenized_full_prompt = {
-        "input_ids": input_ids,
-        "attention_mask": attention_mask,
-        "labels": labels,
+#     tokenized_full_prompt = {
+#         "input_ids": input_ids,
+#         "attention_mask": attention_mask,
+#         "labels": labels,
+#     }
+#     return tokenized_full_prompt
+
+def generate_and_tokenize_prompt(data_point, max_length, tokenizer):
+    # Extract text for input
+    text = data_point["input_text"]  # Key must match your dataset structure
+    label = data_point["output_text"]  # Extract labels for supervision
+    
+    # Tokenize the input text
+    tokenized_input = tokenizer(
+        text,
+        max_length=max_length,
+        truncation=True,
+        padding="max_length",
+        return_tensors="pt",
+    )
+    
+    # Encode the labels
+    tokenized_label = tokenizer(
+        label,
+        max_length=max_length,
+        truncation=True,
+        padding="max_length",
+        return_tensors="pt",
+    )
+
+    return {
+        "input_ids": tokenized_input["input_ids"].squeeze(0),
+        "attention_mask": tokenized_input["attention_mask"].squeeze(0),
+        "labels": tokenized_label["input_ids"].squeeze(0),
     }
-    return tokenized_full_prompt
+
+
 
 
 def batch_grouped_sft_generate(
